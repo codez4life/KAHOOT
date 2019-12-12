@@ -1,0 +1,26 @@
+<div class="ui centered grid">
+  <div class="six wide tablet ten wide computer column">
+    <form action="/api/kahoots/{{kahoot.id}}?_method=PUT" method="post" class="ui form segment">
+      <div class="field">
+        <h1 class="ui center aligned header"> Edit Your Kahoot
+        </h1>
+        <input type="hidden" name="_method" value="PUT">
+        <label>Title</label>
+        <input type="text" name="title" value="{{kahoot.title}}" required>
+      </div>
+      <div class="field">
+        <label>Description</label>
+        <textarea type="text" name="details" required>
+                        {{kahoot.description}}
+         </textarea>
+        <div>
+          <div class="ui two buttons">
+            <button class="ui left floated secondary button">Resave</button>
+            <form method="post" action="/api/ideas/{{id}}?_method=DELETE">
+              <input type="hidden" name="_method" value="DELETE">
+              <button class="ui right floated red button">Edit Questions</button>
+            </form>
+          </div>
+    </form>
+  </div>
+</div>

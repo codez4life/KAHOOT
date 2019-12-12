@@ -1,0 +1,28 @@
+<div>
+  <h1 class="ui center aligned  huge header" style="color:white">Created Kahoots</h1>
+</div>
+<div class="ui stackable four column grid link cards">
+  {{#each kahoots}}
+  <div class="column">
+    <div class=" ui yellow card">
+      <div class="content">
+        <div class="center aligned header"><span>kahoot:</span>{{title}}</div>
+        <div class="description">{{description}}</div>
+      </div>
+
+      <button class="ui green button">
+        <a href="/api/kahoots/{{id}}"><i class="game icon"></i>
+          Play Kahoot
+        </a>
+      </button>
+      <form method="post" action="/api/kahoots/{{id}}?_method=DELETE">
+        <input type="hidden" name="_method" value="DELETE">
+        <button class="ui fluid red button"><a href=""><i class="trash icon"></i>
+            Discard</a></button>
+      </form>
+    </div>
+  </div>
+  {{else}}
+  <h1 class="center aligned header">You don't have any Kahoot created</h1>
+  {{/each}}
+</div>

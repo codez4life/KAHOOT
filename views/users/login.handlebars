@@ -1,0 +1,31 @@
+<div class="ui centered grid">
+  <div class="six wide tablet six wide computer column">
+    <form method="POST" action="/api/users/login" class="ui form segment">
+      <div><img class="ui centered tiny image" src="/img/kahoot.png"></div>
+      <h1 class="ui center aligned header">Kahoot Account Login</h1>
+      <div class="field">
+        <label>Email</label>
+        <div class="ui left icon input">
+          <input type="text" placeholder="Email" name="email" required>
+          <i class="at icon"></i>
+        </div>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <div class="ui left icon input">
+          <input type="password" placeholder="Password" name="password" required>
+          <i class="privacy icon"></i>
+        </div>
+      </div>
+      <button class="circular ui fluid purple button " type="submit">Submit</button>
+      <h5 className="ui horizontal divider header">
+        <i className=" ui red heart icon"></i>
+        Kahoot
+      </h5>
+      <p className="ui center aligned">
+        Don't have an account?
+        <a href="/api/users/register"> Sign Up </a>
+      </p>
+    </form>
+  </div>
+</div>
